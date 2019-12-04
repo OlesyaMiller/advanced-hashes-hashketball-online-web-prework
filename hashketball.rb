@@ -266,7 +266,7 @@ def long_name_steals_a_ton?
   
   game_hash.each do |key, value|
     value[:players].each do |i|
-      if largest_steals == nil && i[:steals] > largest_steals
+      if largest_steals == nil || i[:steals] > largest_steals
         largest_steals = i[:steals]
       end
     end
